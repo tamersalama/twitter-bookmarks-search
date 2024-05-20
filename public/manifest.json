@@ -6,7 +6,7 @@
 
   "icons": { "16": "icon128.png", "48": "icon128.png", "128": "icon128.png" },
 
-  "permissions": ["webRequest", "webRequestBlocking", "*://*.twitter.com/*"],
+  "permissions": ["webRequest", "webRequestBlocking", "*://*.x.com/*"],
 
   "background": {
     "page": "background.html"

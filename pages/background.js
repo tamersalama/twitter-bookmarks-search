@@ -22,13 +22,13 @@ if (typeof window !== "undefined") {
       const requestHeaders = details.requestHeaders
       // This is required for our fetch requests to succeed in Chromes
       if (!requestHeaders.find(h => h.name.toLowerCase() === "origin")) {
-        requestHeaders.push({ name: "Origin", value: "https://twitter.com" })
+        requestHeaders.push({ name: "Origin", value: "https://x.com" })
       }
       return {
         requestHeaders,
       }
     },
-    { urls: ["*://*.twitter.com/*Bookmarks*"] },
+    { urls: ["*://*.x.com/*Bookmarks*"] },
     webRequestOptions
   )
 
@@ -39,7 +39,7 @@ if (typeof window !== "undefined") {
       csrfToken = details.requestHeaders.find(h => h.name.toLowerCase() === "x-csrf-token").value
       sendCredentials()
     },
-    { urls: ["*://*.twitter.com/*Bookmarks*"] },
+    { urls: ["*://*.x.com/*Bookmarks*"] },
     ["requestHeaders"]
   )
 

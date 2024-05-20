@@ -170,18 +170,18 @@ index e5cd854..cc1802d 100644
    },
    hashtags: function(tag) {
      return {
--      href: 'https://twitter.com/search/%23' + tag.text,
+-      href: 'https://x.com/search/%23' + tag.text,
 -      text: '#' + tag.text,
 -      indices: tag.indices
 -    };
-+      href: "https://twitter.com/search/%23" + tag.text,
++      href: "https://x.com/search/%23" + tag.text,
 +      text: "#" + tag.text,
 +      indices: tag.indices,
 +    }
    },
    user_mentions: function(mention) {
      return {
--      href: 'https://twitter.com/intent/user?user_id=' + mention.id_str,
+-      href: 'https://x.com/intent/user?user_id=' + mention.id_str,
 -      text: '@' + mention.name,
 -      indices: mention.indices
 -    };
@@ -333,8 +333,8 @@ index e5cd854..cc1802d 100644
 -  handleExtendedCompatibilityEntities(tweet);
 +  handleExtendedCompatibilityEntities(tweet)
    var parsed = {
--    href: 'https://twitter.com/' + username + '/status/' + tweet.id_str,
-+    href: "https://twitter.com/" + username + "/status/" + tweet.id_str,
+-    href: 'https://x.com/' + username + '/status/' + tweet.id_str,
++    href: "https://x.com/" + username + "/status/" + tweet.id_str,
      text: tweet.full_text || tweet.text,
      date: opts.formatDate(tweet.created_at),
 -    textAdjustment: []

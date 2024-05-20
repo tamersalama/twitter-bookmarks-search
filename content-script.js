@@ -32,7 +32,7 @@ async function fetchBookmarks() {
 
   // console.log("Fetching bookmarks...")
   const res = await fetch(
-    "https://api.twitter.com/2/timeline/bookmark.json?include_profile_interstitial_type=1&include_blocking=1&include_blocked_by=1&include_followed_by=1&include_want_retweets=1&include_mute_edge=1&include_can_dm=1&include_can_media_tag=1&skip_status=1&cards_platform=Web-12&include_cards=1&include_composer_source=true&include_ext_alt_text=true&include_reply_count=1&tweet_mode=extended&include_entities=true&include_user_entities=true&include_ext_media_color=true&include_ext_media_availability=true&send_error_codes=true&simple_quoted_tweets=true&count=10000&ext=mediaStats%2CcameraMoment",
+    "https://api.x.com/2/timeline/bookmark.json?include_profile_interstitial_type=1&include_blocking=1&include_blocked_by=1&include_followed_by=1&include_want_retweets=1&include_mute_edge=1&include_can_dm=1&include_can_media_tag=1&skip_status=1&cards_platform=Web-12&include_cards=1&include_composer_source=true&include_ext_alt_text=true&include_reply_count=1&tweet_mode=extended&include_entities=true&include_user_entities=true&include_ext_media_color=true&include_ext_media_availability=true&send_error_codes=true&simple_quoted_tweets=true&count=10000&ext=mediaStats%2CcameraMoment",
     {
       credentials: "include",
       headers: {
@@ -116,9 +116,9 @@ function Content() {
 
   async function onSubmit(event) {
     event.preventDefault()
-    if (!tweets && window.location.href.includes("mobile.twitter.com")) {
+    if (!tweets && window.location.href.includes("mobile.x.com")) {
       return alert(
-        `Shucks, you found that one little thing that doesn't work. You are on 'mobile.twitter.com' and it's not loading bookmarks for some reason. Change to 'twitter.com' and then it should work`
+        `Shucks, you found that one little thing that doesn't work. You are on 'mobile.x.com' and it's not loading bookmarks for some reason. Change to 'x.com' and then it should work`
       )
     }
 
